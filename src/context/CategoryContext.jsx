@@ -1,4 +1,4 @@
-// src/context/CategoryContext.jsx
+// market-list/src/context/CategoryContext.jsx
 import { createContext, useContext, useState } from "react";
 
 const CategoryContext = createContext();

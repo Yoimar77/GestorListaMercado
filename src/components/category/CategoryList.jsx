@@ -1,3 +1,4 @@
+//market-list/src/components/category/CategoryList.jsx
 import { useCategory } from "../../context/CategoryContext";
 
 const CategoryList = () => {

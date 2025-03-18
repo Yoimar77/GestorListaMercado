@@ -1,3 +1,4 @@
+// market-list/src/context/StoreContext.jsx
 import { createContext, useContext, useState } from "react";
 
 const StoreContext = createContext();

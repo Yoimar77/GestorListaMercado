@@ -1,3 +1,4 @@
+// market-list/src/pages/Stores.jsx
 import StoreSelector from "../components/store/StoreSelector";
 
 const Stores = () => {

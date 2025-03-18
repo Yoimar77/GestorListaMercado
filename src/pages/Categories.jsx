@@ -1,3 +1,4 @@
+// market-list/src/pages/Categories.jsx
 import CategoryForm from "../components/category/CategoryForm";
 import CategoryList from "../components/category/CategoryList";
 

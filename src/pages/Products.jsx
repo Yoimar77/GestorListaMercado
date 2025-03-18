@@ -1,7 +1,10 @@
+// market-list/src/pages/Products.jsx
+import { Link } from "react-router-dom";
 import ProductForm from "../components/product/ProductForm";
 import ProductList from "../components/product/ProductList";
 import CategoryForm from "../components/category/CategoryForm";
 import CategoryList from "../components/category/CategoryList";
+import CategorySelector from "../components/category/CategorySelector";
 
 const Products = () => {
   return (
@@ -12,11 +15,21 @@ const Products = () => {
       <CategoryForm />
       <CategoryList />
       
+      {/* Selector de categoría */}
+      <CategorySelector />
+      
       {/* Formulario para agregar productos */}
       <ProductForm />
       
-      {/* Lista de productos */}
-      <ProductList />
+      {/* Lista de productos (filtrada por categoría) */}
+      <ProductList showFilteredOnly={true} />
+      
+      {/* Botón para ver todos los productos por categoría */}
+      <div className="mt-4 text-center">
+        <Link to="/all-products" className="btn btn-primary">
+          Ver todos los productos por categoría
+        </Link>
+      </div>
     </div>
   );
 };
