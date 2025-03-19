@@ -1,3 +1,4 @@
+//market-list/src/components/category/CategorySelector.jsx
 import { useProduct } from "../../context/ProductContext";
 import { useCategory } from "../../context/CategoryContext";
 
@@ -11,7 +12,7 @@ const CategorySelector = () => {
 
   return (
     <div className="bg-white p-4 shadow rounded-lg mb-4">
-      <label className="block font-medium mb-2">Selecciona una categoría</label>
+      <label className="block font-medium mb-2">Selecciona una categoría para ver su lista</label>
       <select
         value={selectedCategory}
         onChange={handleChange}

@@ -1,13 +1,14 @@
 // market-list/src/App.jsx
 import AppRoutes from "./routes/AppRoutes";
+import Navbar from "./components/layout/Navbar";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-4">
-      <h1 className="text-2xl font-bold text-[var(--color-primary)] mb-4">
-        Market List 🛒
-      </h1>
-      <AppRoutes />
+    <div className="min-h-screen bg-gray-100 flex flex-col">
+      <Navbar />
+      <div className="flex-1 flex flex-col items-center p-4">
+        <AppRoutes />
+      </div>
     </div>
   );
 };

@@ -1,5 +1,6 @@
-// market-list/src/pages/Products.jsx
+// src/pages/Products.jsx
 import { Link } from "react-router-dom";
+import StoreSelector from "../components/store/StoreSelector"; // Agregamos el selector de tienda
 import ProductForm from "../components/product/ProductForm";
 import ProductList from "../components/product/ProductList";
 import CategoryForm from "../components/category/CategoryForm";
@@ -10,6 +11,9 @@ const Products = () => {
   return (
     <div className="max-w-4xl mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Gestión de Productos</h1>
+      
+      {/* Añadimos el selector de tienda */}
+      <StoreSelector />
       
       {/* Sección de categorías (crear y listar) */}
       <CategoryForm />

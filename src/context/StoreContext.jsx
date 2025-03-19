@@ -1,11 +1,12 @@
-// market-list/src/context/StoreContext.jsx
+
+// src/context/StoreContext.jsx
 import { createContext, useContext, useState } from "react";
 
 const StoreContext = createContext();
 
 export const StoreProvider = ({ children }) => {
   // Tiendas predefinidas
-  const stores = ["Supermercado A", "Supermercado B"];
+  const stores = ["Supermercado A", "Supermercado B", "Mercado Central", "Tienda de Barrio"];
   const [selectedStore, setSelectedStore] = useState("");
 
   const selectStore = (storeName) => {

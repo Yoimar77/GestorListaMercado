@@ -1,14 +1,11 @@
-//market-list/src/components/store/StoreSelector.jsx
+// src/components/store/StoreSelector.jsx (modificado)
 import { useStore } from "../../context/StoreContext";
-import { useNavigate } from "react-router-dom";
 
 const StoreSelector = () => {
   const { stores, selectedStore, selectStore } = useStore();
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     selectStore(e.target.value);
-    navigate("/products"); // Navegar a la página de productos al seleccionar tienda
   };
 
   return (
@@ -20,6 +17,11 @@ const StoreSelector = () => {
           <option key={store} value={store}>{store}</option>
         ))}
       </select>
+      {selectedStore && (
+        <div className="mt-2 p-2 bg-green-100 text-green-700 rounded text-center">
+          Tienda seleccionada: <strong>{selectedStore}</strong>
+        </div>
+      )}
     </div>
   );
 };
