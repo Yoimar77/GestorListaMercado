@@ -1,10 +1,8 @@
-//src/services/firebase.js
+// src/services/firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, FacebookAuthProvider, GithubAuthProvider } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
 
-
-// Tu configuración de Firebase (reemplazada con tus valores reales)
+// Configuración de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyAoks4yrGfHyQD2OdDAFMtmL3-CQ5os-bM",
   authDomain: "backend-marketlist.firebaseapp.com",
@@ -18,9 +16,8 @@ const firebaseConfig = {
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 
-// Inicializar servicios
+// Inicializar el servicio de autenticación
 export const auth = getAuth(app);
-export const db = getFirestore(app);
 
 // Proveedores de autenticación
 export const googleProvider = new GoogleAuthProvider();
